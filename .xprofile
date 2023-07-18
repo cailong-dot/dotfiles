@@ -1,0 +1,34 @@
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+#xrandr --setprovideroutputsource Intel NVIDIA-G0
+xrandr --auto
+xrandr --dpi 96 --output eDP-1 --mode 1920x1080 --rate 60.00
+
+eval "$(dbus-launch --sh-syntax --exit-with-session)"
+
+# status状态栏
+slstatus &
+
+# wallpaper壁纸
+feh --bg-fill --randomize /home/cailong/.config/background/* &
+
+fcitx5输入法
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+fcitx5 -d &
+
+# clipboard剪贴版
+copyq &
+
+# dunst消息提醒
+dunst &
+
+# picom动画
+picom -CGb --daemon &
+
+# 小键盘锁
+numlockx  on &
+
+# 开启dwm
+#exec dbus-launch --sh-syntax --exit-with-session dwm
+#exec dwm > ~/.dwm.log
