@@ -77,4 +77,5 @@
     "workbench.iconTheme": "material-icon-theme",
     "scm.inputFontSize": 14,
     "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
+    "explorer.confirmDelete": false,
 }
