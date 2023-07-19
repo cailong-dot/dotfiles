@@ -11,7 +11,7 @@ slstatus &
 # wallpaper壁纸
 feh --bg-fill --randomize /home/cailong/.config/background/* &
 
-fcitx5输入法
+# fcitx5输入法
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS="@im=fcitx5"
@@ -24,7 +24,7 @@ copyq &
 dunst &
 
 # picom动画
-picom -CGb --daemon &
+picom -r 12 --daemon &
 
 # 小键盘锁
 numlockx  on &
