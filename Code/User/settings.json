@@ -1,0 +1,80 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    
+    "editor.indentSize": "tabSize",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+
+    "terminal.explorerKind": "both",
+    "terminal.external.linuxExec": "alacritty",
+    "terminal.integrated.defaultProfile.linux": "bash",
+
+    "rust-analyzer.cargo.sysroot": "/home/cailong/.rustup/toolchains/stable-x86_64-unknown-linux-gnu",
+    "rust-analyzer.completion.autoimport.enable": true,
+    "rust-analyzer.completion.autoself.enable": true,
+    "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+    "rust-analyzer.debug.openDebugPane": false,
+    
+    "go.formatTool": "goimports",
+    "go.diagnostic.vulncheck": "Imports",
+    "go.useLanguageServer": true,
+    "gopls": {
+      "usePlaceholders": true
+    },
+    
+    "redhat.telemetry.enabled": true,
+    "rsp-ui.enableStartServerOnActivation": [
+      {
+        "id": "redhat.vscode-community-server-connector",
+        "name": "Community Server Connector",
+        "startOnActivation": true
+      }
+    ],
+    "rsp-ui.rsp.java.home": "/opt/jdk/jdk17",
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-1.8",
+        "path": "/opt/jdk/jdk8",
+      },
+      {
+        "name": "JavaSE-11",
+        "path": "/opt/jdk/jdk11",
+      },
+      {
+        "name": "JavaSE-17",
+        "path": "/opt/jdk/jdk17",
+        "default": true
+      },
+    ],
+    "java.jdt.ls.java.home": "/opt/jdk/jdk17",
+    "java.configuration.maven.globalSettings": "/opt/apache-maven-3.9.3/conf/settings.xml",
+    "java.configuration.maven.userSettings": "/opt/apache-maven-3.9.3/conf/settings.xml",
+    "maven.settingsFile": "/opt/apache-maven-3.9.3/conf/settings.xml",
+    "maven.executable.path": "/opt/apache-maven-3.9.3/bin/mvn",
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "MariaDB_Gentoo",
+            "database": "gentoo",
+            "username": "gentoo",
+            "password": "Glare+day!Dog"
+        }
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "tabnine.experimentalAutoImports": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "scm.inputFontSize": 14,
+    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
+}
