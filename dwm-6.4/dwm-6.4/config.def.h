@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -11,10 +11,10 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=15",
-					"WenQuanYi Micro Hei:size=15:type=Regular:antialias=true:autohint=true"
-					"Symbols Nerd Font:pixelsize=15:type=Regular:antialias=true:autohint=true"};
-static const char dmenufont[]       = "monospace:size=15";
+static const char *fonts[]          = { "monospace:size=16",
+					"WenQuanYi Micro Hei:size=16:type=Regular:antialias=true:autohint=true"
+					"Symbols Nerd Font:pixelsize=16:type=Regular:antialias=true:autohint=true"};
+static const char dmenufont[]       = "monospace:size=16";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -64,10 +64,11 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "rofi", "-show", "drun", "-config", "/home/cailong/.config/cailong/rofi/config.rasi", NULL};
-static const char *termcmd[]  = { "alacritty", "--config-file", "/home/cailong/.config/cailong/alacritty/alacritty.yml" ,NULL };
+static const char *dmenucmdd[] = { "rofi", "-show", "drun", NULL};
+static const char *dmenucmd[] = {"rofi", "-show", "run", NULL};
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-T", scratchpadname, "--config-file", "/home/cailong/.config/cailong/alacritty/alacritty_2.yml", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-T", scratchpadname, "--config-file", "/home/cailong/.config/alacritty/alacritty_2.yml", NULL };
 static const char *fm[]  = { "spacefm", NULL };
 static const char *flameshot[] = {"flameshot", "gui", NULL}; 
 static const char *volup[] = { "amixer", "-qM", "set", "Master", "2%+", "umute", NULL };
@@ -79,7 +80,8 @@ static const char *firefox[]  = { "firefox", "--disk-cache-dir=/tmp/firefox", NU
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,              	XK_p,                    	spawn,          {.v = dmenucmd } },
+	{ MODKEY,              	XK_p,                    	spawn,          {.v = dmenucmdd } },
+	{ MODKEY|ShiftMask,             XK_p,           spawn,          {.v = dmenucmd} },
 	{ MODKEY,              	XK_Return,              	spawn,          {.v = termcmd } },
 	{ MODKEY,              	XK_r,      					spawn,          {.v = fm } },
 	{ MODKEY,             	XK_c,      					spawn,          {.v = firefox } },

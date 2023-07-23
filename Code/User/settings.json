@@ -1,10 +1,14 @@
 {
     "workbench.colorTheme": "Default Light Modern",
+    "workbench.iconTheme": "material-icon-theme",
     
     "editor.indentSize": "tabSize",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
     "editor.formatOnType": false,
+    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
+    "explorer.confirmDelete": false,
+    "scm.inputFontSize": 14,
 
     "terminal.explorerKind": "both",
     "terminal.external.linuxExec": "alacritty",
@@ -32,6 +36,7 @@
       }
     ],
     "rsp-ui.rsp.java.home": "/opt/jdk/jdk17",
+    "rsp-ui.newServerWebviewWorkflow": true,
     "java.configuration.runtimes": [
       {
         "name": "JavaSE-1.8",
@@ -40,11 +45,11 @@
       {
         "name": "JavaSE-11",
         "path": "/opt/jdk/jdk11",
+        "default": true
       },
       {
         "name": "JavaSE-17",
         "path": "/opt/jdk/jdk17",
-        "default": true
       },
     ],
     "java.jdt.ls.java.home": "/opt/jdk/jdk17",
@@ -57,25 +62,32 @@
     },
     
     "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MariaDB",
-            "name": "MariaDB_Gentoo",
-            "database": "gentoo",
-            "username": "gentoo",
-            "password": "Glare+day!Dog"
-        }
+      {
+        "mysqlOptions": {
+          "authProtocol": "default",
+          "enableSsl": "Disabled"
+        },
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 3306,
+        "driver": "MariaDB",
+        "name": "MariaDB_Gentoo",
+        "database": "gentoo",
+        "username": "gentoo",
+        "password": "Glare+day!Dog"
+      },
+      {
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 5432,
+        "driver": "PostgreSQL",
+        "name": "PostgreSQL",
+        "database": "gentoo",
+        "username": "gentoo",
+        "password": "Glare+day!Dog"
+      }
     ],
     "git.openRepositoryInParentFolders": "never",
-    "tabnine.experimentalAutoImports": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "scm.inputFontSize": 14,
-    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
-    "explorer.confirmDelete": false,
+    
+    
 }
