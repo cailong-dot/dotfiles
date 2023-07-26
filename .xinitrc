@@ -69,9 +69,13 @@ if [ -n "$failsafe" ]; then
  feh --bg-fill --randomize /home/cailong/.config/background/* &
  copyq &
  dunst &
- export GTK_IM_MODULE=fcitx5
- export QT_IM_MODULE=fcitx5
- export XMODIFIERS="@im=fcitx5"
+ export XIM=fcitx
+ export XIM_PROGRAM=fcitx
+ export GTK_IM_MODULE=fcitx
+ export QT_IM_MODULE=fcitx
+ export XMODIFIERS=@im=fcitx
+ export SDL_IM_MODULE=fcitx
+ export GLFW_IM_MODULE=fcitx 
  fcitx5 -d &
  picom -CGb --daemon &
  numlockx  on &

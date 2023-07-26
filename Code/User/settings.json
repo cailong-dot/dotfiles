@@ -41,6 +41,7 @@
       {
         "name": "JavaSE-1.8",
         "path": "/opt/jdk/jdk8",
+        "default": true
       },
       {
         "name": "JavaSE-11",
@@ -50,6 +51,7 @@
       {
         "name": "JavaSE-17",
         "path": "/opt/jdk/jdk17",
+        "default": true
       },
     ],
     "java.jdt.ls.java.home": "/opt/jdk/jdk17",
