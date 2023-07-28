@@ -90,6 +90,7 @@
       }
     ],
     "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.inheritEnv": false,
     
     
 }
