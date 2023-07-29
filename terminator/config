@@ -1,0 +1,26 @@
+[global_config]
+  focus = mouse
+  geometry_hinting = True
+  tab_position = hidden
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, CustomCommandsMenu
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#fbf1c7"
+    background_darkness = 0.9
+    background_type = transparent
+    font = FiraCode Nerd Font 18
+    foreground_color = "#3c3836"
+    use_system_font = False
+    title_use_system_font = False
+    title_font = JetBrains Mono NL 12
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
