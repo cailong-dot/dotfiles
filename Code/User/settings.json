@@ -1,96 +1,125 @@
 {
-    "workbench.colorTheme": "Default Light Modern",
-    "workbench.iconTheme": "material-icon-theme",
-    
-    "editor.indentSize": "tabSize",
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
-    "explorer.confirmDelete": false,
-    "scm.inputFontSize": 14,
-
-    "terminal.explorerKind": "both",
-    "terminal.external.linuxExec": "alacritty",
-    "terminal.integrated.defaultProfile.linux": "bash",
-
-    "rust-analyzer.cargo.sysroot": "/home/cailong/.rustup/toolchains/stable-x86_64-unknown-linux-gnu",
-    "rust-analyzer.completion.autoimport.enable": true,
-    "rust-analyzer.completion.autoself.enable": true,
-    "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
-    "rust-analyzer.debug.openDebugPane": false,
-    
-    "go.formatTool": "goimports",
-    "go.diagnostic.vulncheck": "Imports",
-    "go.useLanguageServer": true,
-    "gopls": {
-      "usePlaceholders": true
+  // 外观设置
+  "workbench.colorTheme": "Default Light Modern",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.menuBarVisibility": "toggle",
+  // 文件打开设置
+  "security.workspace.trust.untrustedFiles": "open",
+  // 编辑器设置
+  "editor.indentSize": "tabSize",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
+  "editor.fontSize": 16,
+  "explorer.confirmDelete": false,
+  "scm.inputFontSize": 14,
+  // 终端设置
+  "terminal.explorerKind": "both",
+  "terminal.external.linuxExec": "terminator",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.inheritEnv": false,
+  // RUST LANGUAGE 配置
+  "rust-analyzer.cargo.sysroot": "/home/cailong/.rustup/toolchains/stable-x86_64-unknown-linux-gnu",
+  "rust-analyzer.server.path": "/home/cailong/.cargo/bin/rust-analyzer",
+  "rust-analyzer.completion.autoself.enable": true,
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "rust-analyzer.debug.openDebugPane": false,
+  // GO LANGUAGE配置
+  "go.formatTool": "goimports",
+  "go.diagnostic.vulncheck": "Imports",
+  "go.useLanguageServer": true,
+  "gopls": {
+    "usePlaceholders": true
+  },
+  // SERVER配置
+  "redhat.telemetry.enabled": true,
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-community-server-connector",
+      "name": "Community Server Connector",
+      "startOnActivation": true
+    }
+  ],
+  "rsp-ui.rsp.java.home": "/opt/jdk/jdk17",
+  "rsp-ui.newServerWebviewWorkflow": true,
+  // JAVA LANGUAGE配置
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/opt/jdk/jdk8"
+      // "default": true
     },
-    
-    "redhat.telemetry.enabled": true,
-    "rsp-ui.enableStartServerOnActivation": [
-      {
-        "id": "redhat.vscode-community-server-connector",
-        "name": "Community Server Connector",
-        "startOnActivation": true
-      }
-    ],
-    "rsp-ui.rsp.java.home": "/opt/jdk/jdk17",
-    "rsp-ui.newServerWebviewWorkflow": true,
-    "java.configuration.runtimes": [
-      {
-        "name": "JavaSE-1.8",
-        "path": "/opt/jdk/jdk8",
-        "default": true
-      },
-      {
-        "name": "JavaSE-11",
-        "path": "/opt/jdk/jdk11",
-        "default": true
-      },
-      {
-        "name": "JavaSE-17",
-        "path": "/opt/jdk/jdk17",
-        "default": true
-      },
-    ],
-    "java.jdt.ls.java.home": "/opt/jdk/jdk17",
-    "java.configuration.maven.globalSettings": "/opt/apache-maven-3.9.3/conf/settings.xml",
-    "java.configuration.maven.userSettings": "/opt/apache-maven-3.9.3/conf/settings.xml",
-    "maven.settingsFile": "/opt/apache-maven-3.9.3/conf/settings.xml",
-    "maven.executable.path": "/opt/apache-maven-3.9.3/bin/mvn",
-    "[jsonc]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
+    {
+      "name": "JavaSE-11",
+      "path": "/opt/jdk/jdk11"
+      // "default": true
     },
-    
-    "sqltools.connections": [
-      {
-        "mysqlOptions": {
-          "authProtocol": "default",
-          "enableSsl": "Disabled"
-        },
-        "previewLimit": 50,
-        "server": "localhost",
-        "port": 3306,
-        "driver": "MariaDB",
-        "name": "MariaDB_Gentoo",
-        "database": "gentoo",
-        "username": "gentoo",
-        "password": "Glare+day!Dog"
+    {
+      "name": "JavaSE-17",
+      "path": "/opt/jdk/jdk17",
+      "default": true
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "disabled",
+  "java.jdt.ls.java.home": "/opt/jdk/jdk17",
+  "java.configuration.maven.globalSettings": "/opt/apache-maven-3.9.3/conf/settings.xml",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.configuration.maven.userSettings": "/opt/apache-maven-3.9.3/conf/settings.xml",
+  // MAVEN配置
+  "maven.settingsFile": "/opt/apache-maven-3.9.3/conf/settings.xml",
+  "maven.executable.path": "/opt/apache-maven-3.9.3/bin/mvn",
+  // 数据库配置
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
       },
-      {
-        "previewLimit": 50,
-        "server": "localhost",
-        "port": 5432,
-        "driver": "PostgreSQL",
-        "name": "PostgreSQL",
-        "database": "gentoo",
-        "username": "gentoo",
-        "password": "Glare+day!Dog"
-      }
-    ],
-    "git.openRepositoryInParentFolders": "never",
-    "terminal.integrated.inheritEnv": false,
-    
-    
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MariaDB",
+      "name": "MariaDB_Gentoo",
+      "database": "gentoo",
+      "username": "gentoo",
+      "password": "Glare+day!Dog"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "PostgreSQL",
+      "database": "gentoo",
+      "username": "gentoo",
+      "password": "Glare+day!Dog"
+    }
+  ],
+  // GIT设置
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.graph.minimap.additionalTypes": [
+    "localBranches",
+    "stashes",
+    "remoteBranches",
+    "tags"
+  ],
+  "gitlens.graph.minimap.dataType": "lines",
+  // JSON和XML格式化
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  // 浏览PCAP文件
+  "vsc-webshark.sharkdFullPath": "/usr/bin/sharkd",
+  "java.dependency.showMembers": true,
+  "vsc-webshark.mergecapFullPath": "/usr/bin/mergecap",
+  "vsc-webshark.tsharkFullPath": "/usr/bin/tshark",
+  "leetcode.endpoint": "leetcode-cn"
 }

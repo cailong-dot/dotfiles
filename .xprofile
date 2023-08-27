@@ -33,6 +33,12 @@ picom -r 12 --daemon &
 # 小键盘锁
 numlockx  on &
 
+# 音量管理
+volumeicon &
+
+# 网络管理
+nm-applet &
+
 # 开启dwm
 #exec dbus-launch --sh-syntax --exit-with-session dwm
 #exec dwm > ~/.dwm.log
